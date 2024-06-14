@@ -1,0 +1,110 @@
+// src/components/about/About.scss
+
+.about-section {
+    background-color: #0c0c1d;
+    color: #ffffff;
+    padding: 60px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .about-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  .animated-text {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .name-highlight {
+    color: #e74c3c;
+    font-weight: bold;
+    animation: colorChange 3s infinite alternate;
+  }
+  
+  .about-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-content li {
+    font-size: 1.2em;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #e74c3c;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes colorChange {
+    from { color: #e74c3c; }
+    to { color: #3498db; }
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-content, .about-image {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  

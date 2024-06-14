@@ -1,0 +1,82 @@
+.project-section {
+  background: #0c0c1d;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.purple {
+  color: #9b59b6;
+}
+
+.project-subheading {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: #f0f0f0;  /* Light grey background */
+  color: #000;  /* Black text */
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px; /* Adjust the height to make cards smaller */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  max-height: 150px; /* Adjust the height to keep images small */
+  object-fit: cover;
+}
+
+.project-card .ant-card-meta-title {
+  color: #000; /* Ensure title is black */
+}
+
+.project-card .ant-card-meta-description {
+  color: #000; /* Ensure description is black */
+}
+
+.ant-card .ant-card-body {
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+}
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-links a {
+  color: #9b59b6;
+  font-size: 1rem;
+}
+
+.project-card {
+  background: #f0f0f0;
+  color: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px;
+}

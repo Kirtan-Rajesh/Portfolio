@@ -1,0 +1,31 @@
+// src/components/navbar/navbar.scss
+
+.navbar {
+    height: 100px;
+    background-color: #0c0c1d;
+  }
+  
+  .wrapper {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .social {
+    display: flex;
+    gap: 20px;
+  
+    a {
+      color: #ffffff;
+      font-size: 1.5em;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #500ce2;
+      }
+    }
+  }
+  
