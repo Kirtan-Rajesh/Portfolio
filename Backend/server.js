@@ -5,7 +5,11 @@ const mongoose = require('mongoose');
 const app= express();
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors({
+    origin :["htps://kirtan-portfolio.vercel.app"],
+    method:["POST" ,"GET"],
+    credentials:true
+            ));
 // middleware
 app.use(express.json())
 
