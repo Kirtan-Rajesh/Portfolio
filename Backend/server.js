@@ -7,7 +7,9 @@ const cors = require('cors');
 
 // List of allowed origins for CORS
 const allowedOrigins = [
-    "https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app/"  // Add your custom domain here
+    "https://portfolio-git-main-kirtans-projects-444621e3.vercel.app",
+    "https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app",
+    "https://portfolio-pied-seven-85.vercel.app"  // Add your custom domain here
 ];
 
 // CORS configuration
@@ -37,7 +39,7 @@ app.use('/api/mails', mailroutes);
 
 // Root route for testing
 app.get('/', (req, res) => {
-    res.json("hello");
+    res.json("hello guys");
 });
 
 // Connect to MongoDB using Mongoose
