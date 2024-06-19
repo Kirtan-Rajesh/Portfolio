@@ -9,7 +9,7 @@ const cors = require('cors');
 const allowedOrigins = [
     "https://portfolio-git-main-kirtans-projects-444621e3.vercel.app",
     "https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app",
-    "https://portfolio-pied-seven-85.vercel.app"  // Add your custom domain here
+    "https://portfolio-pied-seven-85.vercel.app"
 ];
 
 // CORS configuration
@@ -48,7 +48,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
         console.log('Successfully connected to MongoDB');
         
         // Start the server once connected to the database
-        const port = process.env.PORT;
+        const port = process.env.PORT || 3000;
         app.listen(port, () => {
             console.log(`Server is running and listening on port ${port}`);
         });
