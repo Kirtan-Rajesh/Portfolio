@@ -13,7 +13,7 @@ const allowedOrigins = [
 
 // CORS configuration
 app.use(cors({
-    origin:["https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app"],
+    origin:["kirtan-portfolio.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));
