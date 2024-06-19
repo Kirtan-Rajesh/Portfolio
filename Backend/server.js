@@ -9,7 +9,6 @@ const cors = require('cors');
 const allowedOrigins = [
     "https://portfolio-git-main-kirtans-projects-444621e3.vercel.app",
     "https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app",
-    "https://portfolio-pied-seven-85.vercel.app"
 ];
 
 // CORS configuration
