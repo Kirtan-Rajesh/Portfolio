@@ -1,6 +1,6 @@
 // src/components/about/About.jsx
 import React from 'react';
-import './About.scss';
+import './about.scss';
 import aboutImage from '../../../Assets/about.png';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
