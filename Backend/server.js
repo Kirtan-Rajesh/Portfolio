@@ -7,9 +7,7 @@ const cors = require('cors');
 
 // List of allowed origins for CORS
 const allowedOrigins = [
-    "https://portfolio-git-main-kirtans-projects-444621e3.vercel.app",
-    "https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app",
-    "https://portfolio-pied-seven-85.vercel.app"  // Add your custom domain here
+    "https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app/"  // Add your custom domain here
 ];
 
 // CORS configuration
