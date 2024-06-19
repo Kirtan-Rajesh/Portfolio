@@ -13,7 +13,7 @@ const allowedOrigins = [
 
 // CORS configuration
 app.use(cors({
-    origin:["kirtan-portfolio.vercel.app"],
+    origin:["kirtan-portfolio-frontend.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));
