@@ -6,28 +6,28 @@ import './Projects.scss'; // Import your custom styles for Projects
 
 const projects = [
   {
-    imgPath: "/public/reusables.jpg",
+    imgPath: "./reusables.jpg",
     title: "Ecosort - Smart Segregating Bin",
     description:
       "Developed an intelligent waste sorting system using Arduino Uno and machine learning to classify plastic and glass waste, effectively diverting landfill waste.",
     ghLink: "https://github.com/Kirtan-Rajesh/EcoSort---Smart-segregating-Bin",
   },
   {
-    imgPath: "/public/blog.jpg",
+    imgPath: "./blog.jpg",
     title: "InkCraft - MERN Blog Platform",
     description:
       "Developed a feature-rich blogging platform with a modern front-end using React and a robust back-end using Node.js. The platform boosts user engagement with like interactions, nested comments, and detailed blog analytics, all presented on a mobile-responsive interface.",
     ghLink: "https://github.com/Kirtan-Rajesh/React-Blog-Website",
   },
   {
-    imgPath: "/public/marketmind.jpg",
+    imgPath: "./marketmind.jpg",
     title: "MarketMind - Stock Price Predictor",
     description:
       "Developed a one-page web app using Dash to display company information and dynamic stock plots. Integrated an LSTM-based machine learning model for stock price prediction. Enhanced user experience with dynamic visualizations and seamless interactions using Flask.",
     ghLink: "https://github.com/Kirtan-Rajesh/MarketMind",
   },
   {
-    imgPath: "/public/cinepedia.jpg",
+    imgPath: "./cinepedia.jpg",
     title: "CINEPEDIA - A Movie Recommendation system",
     description:
       "Developed a movie recommendation engine using Cosine Similarity for personalized suggestions. Utilized Python’s beautiful-soup4 for efficient web scraping and implemented AJAX requests for a seamless user experience. Analyzed sentiment in user reviews to provide comprehensive insights on selected movies.",
