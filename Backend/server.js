@@ -1,30 +1,30 @@
-const express =require('express')
-require('dotenv').config()
-const mailroutes=require("./Routes/mail")
+const express = require('express');
+require('dotenv').config();
+const mailroutes = require('./Routes/mail');
 const mongoose = require('mongoose');
-const app= express();
+const app = express();
 const cors = require('cors');
 
 app.use(cors({
-    origin :["htps://kirtan-portfolio.vercel.app"],
-    method:["POST" ,"GET"],
-    credentials:true
-            ));
-// middleware
-app.use(express.json())
+    origin: ["https://kirtan-portfolio.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
 
-app.use((req,res,next)=>{
-    console.log(req.path,req.method)
-    next()
-})
+// Middleware
+app.use(express.json());
 
-//routes
-app.use('/api/mails',mailroutes)
+app.use((req, res, next) => {
+    console.log(req.path, req.method);
+    next();
+});
 
+// Routes
+app.use('/api/mails', mailroutes);
 
-app.get("./",(req,res)=>{
+app.get('/', (req, res) => {
     res.json("hello");
-})
+});
 
 // Connect to MongoDB using Mongoose
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -39,10 +39,3 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     .catch((error) => {
         console.error('Error connecting to MongoDB:', error);
     });
-
-
-
-//listen for requests
-
-
-process.env
