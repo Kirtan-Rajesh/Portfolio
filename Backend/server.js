@@ -13,13 +13,7 @@ const allowedOrigins = [
 
 // CORS configuration
 app.use(cors({
-    origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+    origin:["https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));
