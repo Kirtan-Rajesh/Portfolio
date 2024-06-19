@@ -4,7 +4,7 @@ import './ContactForm.scss';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+axios.defaults.withCredentials = true;
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
