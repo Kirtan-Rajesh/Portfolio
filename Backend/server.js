@@ -5,23 +5,39 @@ const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
 
+// List of allowed origins for CORS
+const allowedOrigins = [
+    "https://portfolio-git-main-kirtans-projects-444621e3.vercel.app",
+    "https://portfolio-e2yw7qbld-kirtans-projects-444621e3.vercel.app",
+    "https://portfolio-pied-seven-85.vercel.app"  // Add your custom domain here
+];
+
+// CORS configuration
 app.use(cors({
-    origin: ["https://kirtan-portfolio.vercel.app"],
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: ["POST", "GET"],
     credentials: true
 }));
 
-// Middleware
+// Middleware to parse JSON
 app.use(express.json());
 
+// Logging middleware to track requests
 app.use((req, res, next) => {
-    console.log(req.path, req.method);
+    console.log(`Request Method: ${req.method}, Request Path: ${req.path}`);
     next();
 });
 
-// Routes
+// API routes
 app.use('/api/mails', mailroutes);
 
+// Root route for testing
 app.get('/', (req, res) => {
     res.json("hello");
 });
@@ -32,8 +48,9 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
         console.log('Successfully connected to MongoDB');
         
         // Start the server once connected to the database
-        app.listen(process.env.PORT, () => {
-            console.log(`Server is running and listening on port ${process.env.PORT}`);
+        const port = process.env.PORT || 3000;
+        app.listen(port, () => {
+            console.log(`Server is running and listening on port ${port}`);
         });
     })
     .catch((error) => {
