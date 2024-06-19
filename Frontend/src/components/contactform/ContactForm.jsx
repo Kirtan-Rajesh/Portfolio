@@ -46,7 +46,7 @@ const ContactForm = () => {
         e.preventDefault();
         if (validateForm()) {
             try {
-                const response = await axios.post('http://localhost:4000/api/mails/', formData);
+                const response = await axios.post('kirtan-portfolio.vercel.app/api/mails/', formData);
                 if (response.status === 201) {
                     setFormData({ name: '', email: '', message: '' });
                     toast.success('Message sent successfully!');
